@@ -45,6 +45,11 @@ public class TelaSoma extends javax.swing.JFrame {
         lblSoma.setText("0");
 
         btnSoma.setText("=");
+        btnSoma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSomaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,9 +64,9 @@ public class TelaSoma extends javax.swing.JFrame {
                 .addComponent(txtN2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSoma)
-                .addGap(18, 18, 18)
-                .addComponent(lblSoma)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblSoma, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,6 +87,17 @@ public class TelaSoma extends javax.swing.JFrame {
     private void txtN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtN1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtN1ActionPerformed
+
+    private void btnSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSomaActionPerformed
+        // TODO add your handling code here:
+        int n1 = Integer.parseInt(txtN1.getText());
+        int n2 = Integer.parseInt(txtN2.getText());
+        int s = n1 + n2;
+        
+        lblSoma.setText(Integer.toString(s));
+        
+        
+    }//GEN-LAST:event_btnSomaActionPerformed
 
     /**
      * @param args the command line arguments

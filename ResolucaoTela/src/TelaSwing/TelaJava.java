@@ -89,11 +89,10 @@ public class TelaJava extends javax.swing.JFrame {
         // TODO add your handling code here:
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension d = tk.getScreenSize();
-        
-        lblResolucao.getToolkit(d.width);
-                
-                
+                             
         System.out.println(d.width + " X " + d.height);
+        
+        int largura = Integer(d.width);
         
     }//GEN-LAST:event_btnBotaoActionPerformed
 
